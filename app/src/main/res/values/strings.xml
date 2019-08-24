@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">IWatch</string>
+    <string name="app_name_disguise">Sync Service</string>
+    <string name="title_activity_main3">Main3Activity</string>
+</resources>
