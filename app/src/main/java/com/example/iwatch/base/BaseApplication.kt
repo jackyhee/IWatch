@@ -11,9 +11,7 @@ import com.lzy.okgo.cache.CacheMode
 import com.lzy.okgo.cookie.CookieJarImpl
 import com.lzy.okgo.cookie.store.DBCookieStore
 import com.lzy.okgo.interceptor.HttpLoggingInterceptor
-import com.sua.pocketsua.base.Constant
 
-import com.tencent.bugly.crashreport.CrashReport
 import com.vondear.rxtool.RxTool
 
 import okhttp3.OkHttpClient
@@ -32,7 +30,6 @@ companion object{
 
     override fun onCreate() {
         super.onCreate()
-        initBugly()
         Utils.init(this)
         RxTool.init(this)
         initOkGo()
@@ -57,8 +54,6 @@ companion object{
                 .setCacheTime(CacheEntity.CACHE_NEVER_EXPIRE).retryCount = 3                    //全局统一超时重连次数，默认为三次，那么最差的情况会请求4次(一次原始请求，三次重连请求)，不需要可以设置为0
     }
 
-    private fun initBugly() {
-        CrashReport.initCrashReport(applicationContext, Constant.BUGLY_APPSECRET, true)
-    }
+
 
 }

@@ -98,8 +98,6 @@ dependencies {
     implementation 'com.lzy.net:okrx2:2.0.2'
     implementation 'com.lzy.net:okserver:2.0.5'
 
-    //崩溃检测
-    implementation 'com.tencent.bugly:crashreport:3.0.1'
 
 
 }
